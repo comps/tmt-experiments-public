@@ -1,1 +1,4 @@
 test: ./test.sh
+#environment:
+#    FILE: /etc/passwd
+enabled: true

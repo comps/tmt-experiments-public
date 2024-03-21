@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -x
-grep '' -r /etc/yum.repos.d
+#head -n 1 "$FILE"
+env
 
 exit 0
