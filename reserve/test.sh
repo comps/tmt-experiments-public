@@ -2,14 +2,6 @@
 
 set -e -x
 
-# disable useless services (which are badly packaged and would break on removal)
-function disable_unit {
-    systemctl list-unit-files "$1" >/dev/null && \
-        systemctl disable --now "$1"
-}
-disable_unit restraintd.service
-disable_unit rhsmcertd.service
-
 # remove useless daemons to free up RAM a bit
 dnf remove -y rng-tools irqbalance
 
